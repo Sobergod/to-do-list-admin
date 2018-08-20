@@ -65,7 +65,6 @@ let finish = async (ctx, next) => {
 filterIsFinish = (array, boolean1) => {
     let dbResult = array,
         boolean = boolean1 === "false" ? true : false;
-    console.log(1);
     for (let i = 0; i < dbResult.length; i++) {
         for (let j = dbResult[i].listItems.length - 1; j >= 0; j--) {
             if (dbResult[i].listItems[j].isFinish === boolean) {
